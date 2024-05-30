@@ -1,4 +1,4 @@
-package out.production.streams.api;
+package production.streams.api;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,18 +26,25 @@ public class StreamsExample {
         }
 
         String s1 = integerList.stream().map(x -> String.valueOf(x)).peek(e ->
-                System.out.println("element is " +e)).
-                collect(Collectors.joining(""));
+                System.out.println("peek element is " +e)).
+                collect(Collectors.joining(","));
 
         System.out.println("string is "+s1);
 
         System.out.println("newList1 "+newList1);
 
-        List<Integer> newList = integerList.stream().map(x -> x * 4).filter(x -> x > 80)
-                        .map(x -> x / 4).sorted().collect(Collectors.toList());
+        List<Integer> newList = integerList.stream()
+                .map(x -> x * 4)
+                .peek(y -> System.out.println("value after multiplication is "+y))
+                .filter(x -> x > 80)
+                .peek(y -> System.out.println("value after filter is "+y))
+                .map(x -> x / 4)
+                .peek(y -> System.out.println("value after division is "+y))
+                .sorted()
+                .collect(Collectors.toList());
 
         System.out.println("newList "+newList);
-        Set<Integer> intSet = integerList.stream().filter(x -> x > 20).collect(Collectors.toCollection( TreeSet::new ));
+        Set<Integer> intSet = integerList.stream().filter(x -> x > 20).collect(Collectors.toSet());
         System.out.println("intSet "+intSet);
 
        integerList.stream().map(x -> x * 4)
@@ -72,7 +79,7 @@ public class StreamsExample {
         String chString
                 = Stream.of(ch)
                 .peek(s -> System.out.println("before join1 "+s))
-                .map(arr -> new String(arr))
+                .map(arr -> new StringBuilder(String.valueOf(arr)))
                 .peek(s -> System.out.println("before join2 "+s))
                 .collect(Collectors.joining());
 
