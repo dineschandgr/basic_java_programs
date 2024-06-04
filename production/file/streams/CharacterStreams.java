@@ -1,4 +1,4 @@
-package out.production.file.streams;
+package production.file.streams;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,7 +11,7 @@ import java.io.IOException;
 public class CharacterStreams {
 
     public static void main(String[] args) throws IOException {
-        File f = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/test.txt");
+        File f = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/test.txt");
         FileReader reader = null;
         try {
             reader = new FileReader(f);
@@ -32,7 +32,7 @@ public class CharacterStreams {
         System.out.println("string s "+sb.toString());
 
 
-        FileWriter writer = new FileWriter("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/output.txt");
+        FileWriter writer = new FileWriter("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/output.txt");
         BufferedWriter bw = new BufferedWriter(writer);
         bw.write(sb.toString());
         //writer.write(sb.toString());

@@ -1,9 +1,10 @@
-package out.production.streams.api;
+package production.streams.api;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FlatMap {
@@ -27,6 +28,15 @@ public class FlatMap {
 
        // List<Integer> intList =  stream.collect(Collectors.toList());
         System.out.println("intlist is "+intList);
+
+
+        //reduce
+        List<Integer> array = Arrays.asList(-2, 0, 4, 6, 8);
+
+        // Finding sum of all elements
+        int sum = array.stream().reduce(0,
+                (element1, element2) -> element1 + element2);
+
 
     }
 }

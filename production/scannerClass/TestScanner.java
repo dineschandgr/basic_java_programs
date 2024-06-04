@@ -1,4 +1,4 @@
-package out.production.scannerClass;
+package production.scannerClass;
 
 import java.util.Scanner;
 

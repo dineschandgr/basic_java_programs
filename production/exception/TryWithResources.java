@@ -1,4 +1,4 @@
-package out.production.exception;
+package production.exception;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

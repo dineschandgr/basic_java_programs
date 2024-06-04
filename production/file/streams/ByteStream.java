@@ -1,4 +1,4 @@
-package out.production.file.streams;
+package production.file.streams;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -17,9 +17,10 @@ public class ByteStream {
         BufferedInputStream bis = null;
         BufferedOutputStream bos = null;
         FileOutputStream fos = null;
+        System.out.println();
 
         try {
-            File file = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/img.png");      // img.jpg can be any image file
+            File file = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/img.png");      // img.jpg can be any image file
             FileInputStream in = new FileInputStream(file);
 
             bis = new BufferedInputStream(in);
@@ -28,7 +29,7 @@ public class ByteStream {
             bis.read(temp);
 
             // The img.jpg image data will be written in a new image File named "output.jpg"
-            File outputFile = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/output.jpg");
+            File outputFile = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/output.jpg");
             fos = new FileOutputStream(outputFile);
             bos = new BufferedOutputStream(fos);
             bos.write(temp);

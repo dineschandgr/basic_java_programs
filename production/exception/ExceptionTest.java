@@ -1,4 +1,4 @@
-package out.production.exception;
+package production.exception;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.io.FileReader;
 public class ExceptionTest {
     public static void main(String[] args) {
 
-       int[] arr1 = {10,20};
+       int[] arr1 = {10,20,30 };
 
         checkArray(arr1);
 
@@ -30,12 +30,12 @@ public class ExceptionTest {
 
         System.out.println("end");
 
+
         try {
             FileReader reader = new FileReader("");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-
 
 
        /* if(arr1.length == 2)
@@ -63,7 +63,6 @@ public class ExceptionTest {
     }
 
     public static int testException() throws ArithmeticException{
-
 
         int d = 10 / 0;
 

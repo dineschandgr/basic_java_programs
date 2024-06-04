@@ -9,7 +9,7 @@ public class ParallelStreamsTest {
 
         long count = IntStream.range(2_030_000, 2_040_000)
                 .filter(x -> isPrime(x))
-                //.parallel()
+                .parallel()
                 .count();
 
         System.out.println("count is "+count);

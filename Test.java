@@ -21,14 +21,5 @@ public class Test {
 
 		System.out.println("String val is "+val);
 
-
-		char c = '%';
-		long l = 1L;
-
-		byte b1 = 100;
-		int a1 = b1;
-
-		byte b2 = (byte)a1;
-
 	}
 }

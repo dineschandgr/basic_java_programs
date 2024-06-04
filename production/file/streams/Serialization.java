@@ -17,15 +17,18 @@ class Demo implements java.io.Serializable
 
     public int a;
 
-    public transient String b;
+    public  String b;
+
+    public transient String c;
 
     static int test;
 
     // Default constructor
-    public Demo(int a, String b)
+    public Demo(int a, String b, String c)
     {
         this.a = a;
         this.b = b;
+        this.c = c;
     }
 
     @Override
@@ -33,6 +36,7 @@ class Demo implements java.io.Serializable
         return "Demo{" +
                 "a=" + a +
                 ", b='" + b + '\'' +
+                ", c='" + c + '\'' +
                 '}';
     }
 }
@@ -41,11 +45,11 @@ public class Serialization {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 
-        Demo d = new Demo(1,"test");
+        Demo d = new Demo(1,"test", "c");
         test(d);
-        d = null;
+        //d = null;
 
-        FileOutputStream file = new FileOutputStream("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/test.ser");
+        FileOutputStream file = new FileOutputStream("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/test.ser");
         BufferedOutputStream bos = new BufferedOutputStream(file);
         ObjectOutputStream out = new ObjectOutputStream(bos);
 
@@ -57,7 +61,7 @@ public class Serialization {
         System.out.println(d);
         System.out.println("Object has been serialized");
 
-        FileInputStream fis = new FileInputStream("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/test.ser");
+        FileInputStream fis = new FileInputStream("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/test.ser");
         BufferedInputStream bis = new BufferedInputStream(fis);
         ObjectInputStream ois = new ObjectInputStream(bis);
         System.out.println("deserialized");
