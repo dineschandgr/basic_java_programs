@@ -1,4 +1,4 @@
-package out.production.methods;
+package production.methods;
 
 public class MethodTest {
 
@@ -10,7 +10,7 @@ public class MethodTest {
         int b = 10;
         double d = 10.5;
 
-        add(a,b);
+       int sum = add(a,b);
         System.out.println(add(a,b));
         System.out.println(add(d,b));
 

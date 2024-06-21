@@ -61,6 +61,12 @@ public class lambdaTest {
         Predicate<String> p = (x) -> x.equals("test");
         System.out.println(p.test("test"));
 
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         //accept 1 arg and no return
         Consumer<Integer> conObj = (x) -> System.out.println("Consumer value of x is "+x);
         conObj.accept(20);

@@ -1,4 +1,4 @@
-package out.production.multithreading;
+package production.multithreading;
 
 
 
@@ -21,7 +21,7 @@ public class ThreadImplements {
     public static void main(String[] args) throws InterruptedException {
 
         for (int i = 0; i < 5; i++) {
-            MultiThread1 thread = new MultiThread1();
+
             Thread t = new Thread(() ->{
                 System.out.println("Thread running "+Thread.currentThread().getId());
                 try {
