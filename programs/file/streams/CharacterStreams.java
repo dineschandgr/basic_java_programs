@@ -1,4 +1,4 @@
-package production.file.streams;
+package programs.file.streams;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

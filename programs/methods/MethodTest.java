@@ -1,4 +1,4 @@
-package production.methods;
+package programs.methods;
 
 public class MethodTest {
 

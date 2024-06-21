@@ -1,4 +1,4 @@
-package production.multithreading;
+package programs.multithreading;
 
 public class ThreadLambda {
     public static void main(String[] args) {

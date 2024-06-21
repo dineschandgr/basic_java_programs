@@ -1,4 +1,4 @@
-package production.strings;
+package programs.strings;
 
 import java.util.Arrays;
 

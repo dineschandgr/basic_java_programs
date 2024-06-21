@@ -1,7 +1,5 @@
-package production.multithreading;
+package programs.multithreading;
 
-
-import production.multithreading.MultiThread;
 
 class MultiThread2 extends Thread{
     public void run(){
