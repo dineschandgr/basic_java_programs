@@ -1,4 +1,4 @@
-package out.production.classAndObjects;
+package programs.classAndObjects;
 
 import java.util.Objects;
 
@@ -6,13 +6,15 @@ public class ClassObjectTest {
     public static void main(String[] args) {
         Vehicle v1 = new Vehicle(4, "red");
         v1.print();
-        Vehicle v2 = new Vehicle();
+        Vehicle v2 = new Vehicle(3);
         v2.print();
 
-        System.out.println(v2);
-        System.out.println(v1);
+        System.out.println("v2 "+v2);
+        System.out.println("v1 "+v1);
 
         System.out.println("v1 == v2 "+ (v1==v2));
+        v2.wheel = 4;
+        v2.colour = "red";
         System.out.println("v1 equals v2 "+ (v1.equals(v2)));
 
         Vehicle v3 = new Vehicle(4, "green");
@@ -56,11 +58,17 @@ public class ClassObjectTest {
         System.out.println("no arg constructor");
     }
 
+     //1 args constructor
+     public Vehicle(int wheel){
+        this.wheel = wheel;
+         System.out.println("1 arg constructor "+this.wheel);
+     }
+
     // args constructor
-    public Vehicle(int w, String c){
+    public Vehicle(int w, String colour){
         System.out.println("args constructor");
         this.wheel = w;
-        this.colour = c;
+        this.colour = colour;
     }
 
     // instance method
@@ -77,8 +85,8 @@ public class ClassObjectTest {
      @Override
      public String toString() {
          return "Vehicle values are{ " +
-                 "wheel=" + wheel +
-                 ", colour='" + colour + '\'' +
+                 "wheel=" + this.wheel +
+                 ", colour='" + this.colour + '\'' +
                  '}';
      }
 
