@@ -1,4 +1,4 @@
-package out.production.inheritance;
+package programs.inheritance;
 
 class Vehicle {
 
@@ -6,9 +6,8 @@ class Vehicle {
     public int wheel = 10;
     public String colour = "red";
 
-
-    public Vehicle(){
-        System.out.println("Vehicle Constructor");
+    Vehicle(){
+        System.out.println("Parent no-arg constructor");
     }
 
     public Vehicle(int w, String c){
@@ -48,13 +47,18 @@ class Car extends Vehicle {
         System.out.println("Car Constructor");
     }
 
-    public Car(int wheel, String colour, String n) {
+    public Car(String name){
+        this.name = name;
+        System.out.println("Car Constructor 1 param");
+    }
+
+    public Car(int wheel, String colour, String name) {
 
         super(wheel, colour);
 
         //this.wheel = wheel;
         //this.colour = colour;
-        this.name = n;
+        this.name = name;
         System.out.println("Child Param Constructor " + this.name);
     }
 
@@ -83,16 +87,25 @@ public class InheritanceTest {
         //Vehicle v = new Vehicle(4,"blue");
         //System.out.println(v);
 
-        Car c = new Car(4, "green", "Maruti");
-        System.out.println(c);
+        Car c1 = new Car();
 
-        c.colour = "blue";
+        Car c2 = new Car("Ferrari");
+
+        Car c3 = new Car(4, "green", "Maruti");
+
+        System.out.println("c1 "+c1);
+        System.out.println("c2 "+c2);
+        System.out.println("c3 "+c3);
+
+        System.out.println(c3);
+
+        c3.colour = "blue";
 
         Vehicle v = new Vehicle();
         v.run();
 
         //v = new Car();
-        c.run();
+        c3.run();
 
 
 
@@ -107,9 +120,9 @@ public class InheritanceTest {
         Auto a = new Auto(4, "yellow");
         System.out.println(a);
 
-        c.colour = "green";
+        c3.colour = "green";
 
-        System.out.println(c);
+        System.out.println(c3);
 
     }
 }
@@ -124,7 +137,7 @@ class Auto extends Vehicle {
     }
 
     public Auto(int wheel, String colour){
-       // super(wheel, colour);
+        //super(wheel, colour);
         this.wheel = wheel;
         this.colour = colour;
         System.out.println("Child Param Constructor Auto ");

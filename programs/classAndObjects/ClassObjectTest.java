@@ -93,9 +93,8 @@ public class ClassObjectTest {
      @Override
      public boolean equals(Object o) {
          if (this == o) return true;
-         if (!(o instanceof Vehicle)) return false;
-         Vehicle vehicle = (Vehicle) o;
-         return wheel == vehicle.wheel && Objects.equals(colour, vehicle.colour);
+         if (!(o instanceof Vehicle vehicle)) return false;
+         return wheel == vehicle.wheel && colour.equals(vehicle.colour);
      }
 
      @Override
