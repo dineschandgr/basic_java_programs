@@ -1,4 +1,4 @@
-package out.production.abstraction;
+package programs.abstraction;
 
 abstract class MobilePhone{
     abstract void display();
@@ -24,7 +24,12 @@ class Redmi extends MobilePhone{
     }
 }
 
-
+class OnePlus extends  MobilePhone{
+    @Override
+    void display() {
+        System.out.println("OnePlus Phone Display");
+    }
+}
 
 public class AbstractTest {
     public static void main(String[] args) {
@@ -40,15 +45,26 @@ public class AbstractTest {
         MobileRepair.repair(m);
         m = new Redmi();
        // m.display();
+        MobileRepair.repair(m);
+        m = new OnePlus();
 
+       // m = new Xiaomi();
         MobileRepair.repair(m);
     }
 }
 
 class MobileRepair{
 
+
+    //abstraction
     public static void repair(MobilePhone m){
-        System.out.println("repair method");
+        System.out.println("repair method ");
+
+        //polymorphism
         m.display();
     }
+
+
+
+
 }
