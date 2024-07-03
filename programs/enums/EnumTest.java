@@ -1,9 +1,19 @@
-package out.production.enums;
-
-
+package programs.enums;
 
 import java.util.EnumSet;
 
+enum Animals{
+    TIGER,
+    LION,
+    ELEPHANT,
+    DOG,
+    RABBIT;
+
+    static final EnumSet<Animals> domesticAnimals = EnumSet.of(DOG,RABBIT);
+    static final EnumSet<Animals> wildAnimals = EnumSet.of(LION,ELEPHANT,TIGER);
+
+
+}
 enum Temperature{
 
     LOW (5),
@@ -42,6 +52,7 @@ public class EnumTest {
 
         Temperature temperature = Temperature.MEDIUM;
 
+        System.out.println(Animals.LION);
 
         switch(temperature) {
 
@@ -77,6 +88,12 @@ public class EnumTest {
             System.out.println("fail");
         }
 
+        Animals animal = Animals.TIGER;
+        if(Animals.domesticAnimals.contains(animal)){
+            System.out.println("domestic animals");
+        }else if(Animals.wildAnimals.contains(animal)){
+            System.out.println("wild animals");
+        }
 
     }
 }
