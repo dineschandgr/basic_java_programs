@@ -1,17 +1,14 @@
-package out.production.defaultpackage;
+package programs.defaultpackage;
 
 
 import out.production.Class.Object.ProtectedTest;
-import out.production.Class.Object.Test;
 
 public class TestDefault extends ProtectedTest{
     public static void main(String[] args) {
         //VehicleDefault vehicleDefault = new Veh
-        Test test = new Test();
 
 
-
-        test.test = 10;
+        final int var = 10;
 
     }
 

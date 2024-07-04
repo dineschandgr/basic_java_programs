@@ -1,4 +1,4 @@
-package out.production.Class.Object;
+package programs.Class.Object;
 
 import java.io.Serializable;
 import java.util.Objects;

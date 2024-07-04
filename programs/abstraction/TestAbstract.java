@@ -1,4 +1,4 @@
-package out.production.abstraction;
+package programs.abstraction;
 
 
 
@@ -36,6 +36,10 @@ abstract class CarAbstract {
         @Override
         public void run() {
 
+        }
+
+        public void print() {
+            System.out.println("print");
         }
 
         @Override

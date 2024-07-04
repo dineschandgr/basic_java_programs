@@ -3,6 +3,9 @@ package programs.classAndObjects;
 import java.util.Objects;
 
 public class ClassObjectTest {
+
+    public int a = 10;
+
     public static void main(String[] args) {
         Vehicle v1 = new Vehicle(4, "red");
         v1.print();
