@@ -1,4 +1,4 @@
-package out.production.collections;
+package programs.collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,7 +8,7 @@ public class LinkedListTest {
 
     public static void main(String[] args) {
 
-        LinkedList<Integer> linkedList = new LinkedList<>();
+        List<Integer> linkedList = new LinkedList<>();
         linkedList.add(1);
         linkedList.add(2);
         linkedList.add(0,3);
@@ -16,6 +16,10 @@ public class LinkedListTest {
         linkedList.set(2,100);
         linkedList.clear();
         System.out.println(linkedList);
+
+        for(Integer i : linkedList){
+            System.out.println("i is "+i);
+        }
 
     }
 }

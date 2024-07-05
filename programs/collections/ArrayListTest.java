@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+class parent{
 
-class VehicleCollection implements Cloneable{
+}
+class VehicleCollection extends parent implements Cloneable{
 
     private int wheel = 0;
     private String colour = "red";
@@ -114,11 +116,19 @@ class VehicleCollection implements Cloneable{
             vehicleList.add(v1);
             vehicleList.add(v2);
 
+            VehicleCollection v3 = vehicleList.get(0);
+            parent p1 = vehicleList.get(0);
+            vehicleList.get(1);
+
             System.out.println(vehicleList);
 
-            VehicleCollection v3 = (VehicleCollection) vehicleList.get(0).clone();
+            VehicleCollection v4 = (VehicleCollection) vehicleList.get(0).clone();
 
             v3.setWheel(10);
             System.out.println(vehicleList);
+
+            for(VehicleCollection v : vehicleList){
+                System.out.println(v);
+            }
         }
     }
