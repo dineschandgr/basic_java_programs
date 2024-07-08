@@ -1,4 +1,4 @@
-package out.production.collections;
+package programs.collections;
 
 import java.util.Stack;
 
@@ -17,5 +17,12 @@ public class StackTest {
 
         System.out.println("pop " +stack.pop());
         System.out.println(stack);
+
+        for(int i = 0; i < stack.capacity(); i++){
+            if(!stack.empty()){
+                System.out.println(stack.pop());
+            }
+
+        }
     }
 }

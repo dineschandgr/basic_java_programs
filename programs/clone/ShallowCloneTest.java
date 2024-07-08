@@ -31,6 +31,7 @@ public class ShallowCloneTest {
     public static void main(String[] args) throws CloneNotSupportedException {
 
         CloneTest c = new CloneTest(1,"A");
+        //should not copy directly
         CloneTest c1 = c;
         c1.id = 5;
         System.out.println("c is "+c);
