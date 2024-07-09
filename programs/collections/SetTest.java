@@ -1,4 +1,6 @@
-package out.production.collections;
+package programs.collections;
+
+import programs.collections.Student;
 
 import java.util.ArrayList;
 import java.util.HashSet;
