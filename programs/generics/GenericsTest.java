@@ -1,4 +1,4 @@
-package out.production.generics;
+package programs.generics;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,6 +17,13 @@ public class GenericsTest {
 
         Map<String,Integer> map = new LinkedHashMap<>();
         //map.put(10,"s");
+
+        List<Integer> l1 = new ArrayList<>();
+        l1.add(10);
+
+        Integer a = (Integer) l1.get(0);
+        Integer b = (Integer) l1.get(1);
+
 
         List<Integer> list = new ArrayList<>();
         list.add(10);

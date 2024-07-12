@@ -1,8 +1,8 @@
-package out.production.generics;
+package programs.generics;
 
 public class GenericsPairTest {
     public static void main(String[] args) {
-        Pair<String,Integer, Double> p = new Pair<String, Integer, Double>("hello", 10);
+        Pair<String,Integer,Double> p = new Pair<String, Integer, Double>("hello", 10);
         p.setFirst("aaa");
         p.setThird(10.00);
 
@@ -11,12 +11,13 @@ public class GenericsPairTest {
     }
 }
 
-
 class Pair<S,I,D> {
     private S first;
     private I second;
 
     private D third;
+
+    private Integer fourth;
 
     public Pair(S first, I second) {
         this.first = first;
@@ -36,8 +37,23 @@ class Pair<S,I,D> {
 
     }
 
-
     public I getSecond() {
         return this.second;
+    }
+
+    public void setSecond(I second) {
+        this.second = second;
+    }
+
+    public D getThird() {
+        return third;
+    }
+
+    public Integer getFourth() {
+        return fourth;
+    }
+
+    public void setFourth(Integer fourth) {
+        this.fourth = fourth;
     }
 }
