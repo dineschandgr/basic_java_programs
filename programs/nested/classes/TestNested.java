@@ -1,7 +1,4 @@
-package out.production.nested.classes;
-
-
-import out.production.nested.classes.Nested.Nested1;
+package programs.nested.classes;
 
 class Nested{
 
@@ -29,6 +26,7 @@ class Nested{
 
 
         }
+
 public class TestNested {
 
     static{
