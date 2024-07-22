@@ -1,4 +1,4 @@
-package out.production.streams.api;
+package programs.streams.api;
 
 import java.util.stream.IntStream;
 

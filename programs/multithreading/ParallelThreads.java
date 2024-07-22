@@ -1,6 +1,6 @@
-package out.production.multithreading;
+package programs.multithreading;
 
-import out.production.streams.api.ParallelStreamsTest;
+import programs.streams.api.ParallelStreamsTest;
 
 import java.util.stream.Stream;
 

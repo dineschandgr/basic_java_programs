@@ -1,6 +1,7 @@
 package programs.streams.api;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -12,6 +13,8 @@ public class StreamsExample {
     public static void main(String[] args) {
 
         List<Integer> integerList = List.of(100,10,20,30,40,40,50);
+        List<Integer> integerList2 = Arrays.asList(100, 10, 20, 30, 40, 40, 50);
+        integerList2.set(0,100000);
 
         List<Integer> newList1 = new ArrayList<>(integerList.size());
 
@@ -19,9 +22,12 @@ public class StreamsExample {
             newList1.add(i*4);
         }
 
-        String s1 = integerList.stream().map(x -> String.valueOf(x)).peek(e ->
+        List<Integer> newList3 = integerList.stream().map( x -> x * 4).collect(Collectors.toList());
+        System.out.println("newlist3 "+newList3);
+
+        String s1 = integerList.stream().map(x -> String.valueOf(x) + " hi ").peek(e ->
                 System.out.println("peek element is " +e)).
-                collect(Collectors.joining(","));
+                collect(Collectors.joining("|||"));
 
         System.out.println("string is "+s1);
 
