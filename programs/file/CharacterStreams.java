@@ -1,4 +1,4 @@
-package programs.file.streams;
+package programs.file;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,7 +11,7 @@ import java.io.IOException;
 public class CharacterStreams {
 
     public static void main(String[] args) throws IOException {
-        File f = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/test.txt");
+        File f = new File("programs/file/test.txt");
         FileReader reader = null;
         try {
             reader = new FileReader(f);
@@ -21,18 +21,24 @@ public class CharacterStreams {
         BufferedReader br = new BufferedReader(reader);
         int temp;
         StringBuilder sb = new StringBuilder();
-        while( (temp = br.read()) != -1){
+        while(true){
+            try {
+                if ((temp = br.read()) == -1)
+                    break;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println((char)temp);
             sb.append((char)temp);
 // H He Hel Hell Hello
             //hello world
         }
         
-        sb.append("ssssss ssss sssssss sss jhasvghvh");
+        sb.append(" ssssss ssss sssssss sss jhasvghvh");
         System.out.println("string s "+sb.toString());
 
-
-        FileWriter writer = new FileWriter("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/output.txt");
+        File output = new File("programs/file/output.txt");
+        FileWriter writer = new FileWriter(output);
         BufferedWriter bw = new BufferedWriter(writer);
         bw.write(sb.toString());
         //writer.write(sb.toString());

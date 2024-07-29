@@ -12,10 +12,9 @@ public class TryWithResources {
 
         //File f = new File("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/test.txt");
 
-        try(  FileReader reader = new FileReader("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/test.txt");
-
+        try(  FileReader reader = new FileReader("programs/file/test.txt");
               BufferedReader br = new BufferedReader(reader);
-              FileWriter writer = new FileWriter("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/out/production/file/streams/output1.txt");
+              FileWriter writer = new FileWriter("programs/file/output.txt");
               BufferedWriter bw = new BufferedWriter(writer);
             ){
 
@@ -31,7 +30,7 @@ public class TryWithResources {
             bw.write(sb.toString());
 
         }catch(Exception e){
-
+            e.printStackTrace();
         }
 
     }

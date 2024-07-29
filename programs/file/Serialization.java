@@ -1,20 +1,15 @@
-package out.production.file.streams;
+package programs.file;
 
-import java.beans.Transient;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 class Demo implements java.io.Serializable
 {
-
-
     public int a;
 
     public  String b;
@@ -46,10 +41,9 @@ public class Serialization {
 
 
         Demo d = new Demo(1,"test", "c");
-        test(d);
         //d = null;
 
-        FileOutputStream file = new FileOutputStream("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/test.ser");
+        FileOutputStream file = new FileOutputStream("programs/file/test.ser");
         BufferedOutputStream bos = new BufferedOutputStream(file);
         ObjectOutputStream out = new ObjectOutputStream(bos);
 
@@ -61,7 +55,7 @@ public class Serialization {
         System.out.println(d);
         System.out.println("Object has been serialized");
 
-        FileInputStream fis = new FileInputStream("/Users/dineshchandgeetharavichandran/Desktop/Dinesh/Project/Java/untitled/src/production/file/streams/test.ser");
+        FileInputStream fis = new FileInputStream("programs/file/test.ser");
         BufferedInputStream bis = new BufferedInputStream(fis);
         ObjectInputStream ois = new ObjectInputStream(bis);
         System.out.println("deserialized");
